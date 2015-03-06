@@ -185,7 +185,12 @@
     NSMutableArray* calendars = [[NSMutableArray alloc] initWithCapacity:calendarIdentifiers.count];
 
     for (NSString* calendarIdentifier in calendarIdentifiers)
-        [calendars addObject:[self.eventStore calendarWithIdentifier:calendarIdentifier]];
+    {
+        id calendar = [self.eventStore calendarWithIdentifier:calendarIdentifier];
+
+        if (calendar != nil)
+            [calendars addObject:[self.eventStore calendarWithIdentifier:calendarIdentifier]];
+    }
 
     if (calendars.count == 0)
         calendars = [[self.eventStore calendarsForEntityType:EKEntityTypeEvent] mutableCopy];
