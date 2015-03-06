@@ -192,7 +192,7 @@
 				ORGANIZATIONNAME = "Soheil Rashidi";
 				TargetAttributes = {
 					5B78877A180D6BD3009D4276 = {
-						DevelopmentTeam = URG7PVWQBF;
+						DevelopmentTeam = V6SZEEMLM2;
 					};
 				};
 			};
