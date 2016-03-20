@@ -118,7 +118,7 @@
     if (distance == 1)
         return @"Tomorrow";
 
-    return [NSString stringWithFormat:@"In %d days", eventGroup.distance];
+    return [NSString stringWithFormat:@"In %ld days", (long)eventGroup.distance];
 }
 
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath

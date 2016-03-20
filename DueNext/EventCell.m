@@ -41,7 +41,7 @@
         NSCalendar* calendar = [NSCalendar currentCalendar];
         NSDateComponents* eventStartDayComponents = [calendar components:NSCalendarUnitHour | NSCalendarUnitMinute fromDate:event.startDate];
 
-        self.timeLabel.text = [NSString stringWithFormat:@"%02d:%02d", eventStartDayComponents.hour, eventStartDayComponents.minute];
+        self.timeLabel.text = [NSString stringWithFormat:@"%02ld:%02ld", (long)eventStartDayComponents.hour, (long)eventStartDayComponents.minute];
     }
 }
 
